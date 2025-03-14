@@ -1,0 +1,16 @@
+/*
+Theme Name: Portfolio Child Theme
+Theme URI: http://example.com
+Description: Thème enfant pour le TD Portfolio
+Author: Votre Nom
+Author URI: http://example.com
+Template: twentytwentyfour
+Version: 1.0.0
+*/
+
+/* Importez les styles du thème parent */
+@import url('../twentytwentyfour/style.css');
+
+h1 {
+    color: #7958da;
+}
