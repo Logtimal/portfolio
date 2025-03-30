@@ -1,62 +1,56 @@
-<p align="center">
-  <a href="https://roots.io/bedrock/">
-    <img alt="Bedrock" src="https://cdn.roots.io/app/uploads/logo-bedrock.svg" height="100">
-  </a>
-</p>
+# Portfolio avec WordPress et Roots/Bedrock
 
-<p align="center">
-  <a href="https://packagist.org/packages/roots/bedrock">
-    <img alt="Packagist Installs" src="https://img.shields.io/packagist/dt/roots/bedrock?label=projects%20created&colorB=2b3072&colorA=525ddc&style=flat-square">
-  </a>
+## ⚠️ Problème d'URL
 
-  <a href="https://packagist.org/packages/roots/wordpress">
-    <img alt="roots/wordpress Packagist Downloads" src="https://img.shields.io/packagist/dt/roots/wordpress?label=roots%2Fwordpress%20downloads&logo=roots&logoColor=white&colorB=2b3072&colorA=525ddc&style=flat-square">
-  </a>
-  
-  <img src="https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/roots/bedrock/master/composer.json&label=wordpress&logo=roots&logoColor=white&query=$.require[%22roots/wordpress%22]&colorB=2b3072&colorA=525ddc&style=flat-square">
+Toutes les réalisations et l'archive des réalisations ne sont pas accessibles via `127.0.0.1/portfolio/web/portfolio` mais via `localhost/porfolio/web/portfolio`. Le seul moyen d'y accéder est de changer l'URL manuellement.
 
-  <a href="https://github.com/roots/bedrock/actions/workflows/ci.yml">
-    <img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/roots/bedrock/ci.yml?branch=master&logo=github&label=CI&style=flat-square">
-  </a>
+## Étapes Réalisées
 
-  <a href="https://twitter.com/rootswp">
-    <img alt="Follow Roots" src="https://img.shields.io/badge/follow%20@rootswp-1da1f2?logo=twitter&logoColor=ffffff&message=&style=flat-square">
-  </a>
-</p>
+1. **Installation et Configuration**
+    - (Roots/Bedrock, Composer, Thème parent/enfant)
 
-<p align="center">WordPress boilerplate with Composer, easier configuration, and an improved folder structure</p>
+2. **Création du Custom Post Type (CPT)**
+    - (Fichier `cpt-portfolio.php`, CPT `portfolio`, options, images, `functions.php`)
 
-<p align="center">
-  <a href="https://roots.io/bedrock/">Website</a> &nbsp;&nbsp; <a href="https://roots.io/bedrock/docs/installation/">Documentation</a> &nbsp;&nbsp; <a href="https://github.com/roots/bedrock/releases">Releases</a> &nbsp;&nbsp; <a href="https://discourse.roots.io/">Community</a>
-</p>
+3. **Ajout des Champs Personnalisés avec ACF**
+    - (Plugin ACF, groupe de champs, configuration ACF)
 
-## Sponsors
+4. **Affichage des Réalisations**
+    - (Fichiers `single-portfolio.php` et `archive-portfolio.php`, champs ACF, `style.css`)
 
-Bedrock is an open source project and completely free to use. If you've benefited from our projects and would like to support our future endeavors, please consider [sponsoring Roots](https://github.com/sponsors/roots).
+5. **Création de la Homepage**
+    - (Présentation, réalisations, personnalisation, responsive)
 
-<div align="center">
-<a href="https://carrot.com/"><img src="https://cdn.roots.io/app/uploads/carrot.svg" alt="Carrot" width="120" height="90"></a> <a href="https://wordpress.com/"><img src="https://cdn.roots.io/app/uploads/wordpress.svg" alt="WordPress.com" width="120" height="90"></a> <a href="https://worksitesafety.ca/careers/"><img src="https://cdn.roots.io/app/uploads/worksite-safety.svg" alt="Worksite Safety" width="120" height="90"></a> <a href="https://www.itineris.co.uk/"><img src="https://cdn.roots.io/app/uploads/itineris.svg" alt="Itineris" width="120" height="90"></a> <a href="https://bonsai.so/"><img src="https://cdn.roots.io/app/uploads/bonsai.svg" alt="Bonsai" width="120" height="90"></a> <a href="https://fusepress.co/sp/sign-up/"><img src="https://cdn.roots.io/app/uploads/fusepress.svg" alt="FusePress" width="120" height="90"></a>
-</div>
+6. **Gestion et Livraison du Projet**
+    - (Repository GitHub, export complet, `README.md`)
 
-## Overview
+## Difficultés Rencontrées
 
-Bedrock is a WordPress boilerplate for developers that want to manage their projects with Git and Composer. Much of the philosophy behind Bedrock is inspired by the [Twelve-Factor App](http://12factor.net/) methodology, including the [WordPress specific version](https://roots.io/twelve-factor-wordpress/).
+- Problèmes d'installation de WordPress et de création du projet.
+- Difficultés de connexion à la base de données avec WordPress.
+- Problèmes au lancement du serveur PHP.
+- Le plus gros problème rencontré est que toutes les réalisations et l'archive des réalisations ne sont pas accessibles via `127.0.0.1/portfolio/web/portfolio` mais via `localhost/web/portfolio`. Le seul moyen d'y accéder est de changer l'URL manuellement. J'ai essayé plusieurs méthodes, y compris des modifications dans le fichier `.env` et directement dans la base de données, mais rien n'a fonctionné. J'espère que cela fonctionnera sur la machine de l'utilisateur, mais en local, je n'ai pas réussi à résoudre ce problème.
 
-- Better folder structure
-- Dependency management with [Composer](https://getcomposer.org)
-- Easy WordPress configuration with environment specific files
-- Environment variables with [Dotenv](https://github.com/vlucas/phpdotenv)
-- Autoloader for mu-plugins (use regular plugins as mu-plugins)
-- Enhanced security (separated web root and secure passwords with [wp-password-bcrypt](https://github.com/roots/wp-password-bcrypt))
+## Installation et Lancement du Projet
 
-## Getting Started
+1. **Cloner le Repository**
+   ```sh
+   git clone https://github.com/Logtimal/portfolio
+   cd portfolio
 
-See the [Bedrock installation documentation](https://roots.io/bedrock/docs/installation/).
+2. **Installer les Dépendances**
+   ```sh
+   composer install
 
-## Stay Connected
+3. **Configurer les Variables d'Environnement**
+Copier le fichier .env.example en .env et modifier les valeurs selon votre configuration.
 
-- Join us on Discord by [sponsoring us on GitHub](https://github.com/sponsors/roots)
-- Participate on [Roots Discourse](https://discourse.roots.io/)
-- Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-- Read the [Roots Blog](https://roots.io/blog/)
-- Subscribe to the [Roots Newsletter](https://roots.io/newsletter/)
+4. **Importer la Base de Données**
+Importer le fichier SQL fourni dans votre base de données MySQL (portfolio.sql).
+
+5. **Lancer le Serveur PHP**
+    ```sh
+    php -S localhost:8888 -t web
+
+6. **Accéder au Site**
+Ouvrir votre navigateur et aller à http://localhost:8888/portfolio/web.
